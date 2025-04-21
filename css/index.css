@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&display=swap");
+
+h1 {
+  text-align: center;
+  color: #f5dc20dd;
+  font-style: oblique;
+}
+
+body {
+  text-align: center;
+  list-style-type: none;
+  background-color: rgb(75, 133, 57);
+  color: rgb(159, 19, 19);
+  font-family: "Playwrite AU SA", cursive;
+  font-size: 25px;
+  font-weight: bold;
+  line-height: 1.6;
+  margin: 20px;
+  padding: 20px;
+}
+.navbar ul {
+  list-style-type: none;
+  background-color: rgb(192, 96, 27);
+  padding: 50px;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+.navbar a {
+  color: darkgrey;
+  text-decoration: none;
+  padding: 15px;
+  display: block;
+  text-align: center;
+}
+.navbar a:hover {
+  background-color: hsl(27, 83%, 54%);
+}
+h2 {
+  text-align: center;
+}
+#experience ul {
+  list-style-type: none;
+  background-color: rgb(12, 118, 150);
+  border: 4px solid black;
+  padding: 20px;
+  border-radius: 4px;
+  margin: 100px;
+}
+#connect ul {
+  list-style-type: none;
+  height: 100px;
+  width: 100px;
+  display: inline-block;
+}
