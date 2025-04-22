@@ -1,29 +1,59 @@
-@import url("https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&display=swap");
+@keyframes slideInLeft{
+    from{
+        transform: translateX(-300px);
+    }
+    to{
+        transform: translateX(300px);
+    }
+}
+.heading-1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 80px;
+    background-color: rgb(23, 46, 246);
+    padding: 40px;
+    margin-left: 280px;
+    margin-right: 280px;
+    font-weight: lighter;
+    color: greenyellow;
+    text-decoration: underline;
+    text-decoration-color: rgb(231, 40, 43);
+    animation-name: slideInLeft;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-fill-mode: both;
 
-h1 {
-  text-align: center;
-  color: #f5dc20dd;
-  font-style: oblique;
+    transform: translateX(-150px);
 }
 
-body {
-  text-align: center;
-  list-style-type: none;
-  background-color: rgb(75, 133, 57);
-  color: rgb(159, 19, 19);
-  font-family: "Playwrite AU SA", cursive;
+
+body{
+    color: rgb(159, 19, 19);
+   background-color: rgb(75, 133, 57); 
+   font-size: 35px;
+   text-align: center;
+   font-family: "Playwrite AU SA", cursive;
   font-size: 25px;
   font-weight: bold;
   line-height: 1.6;
-  margin: 20px;
+  margin-left: 100px;
+  margin-right: 100px;
   padding: 20px;
+}
+#about {
+  text-align: center;
+  list-style-type: none;
+  
+  
 }
 .navbar ul {
   list-style-type: none;
   background-color: rgb(192, 96, 27);
   padding: 50px;
-  margin-left: 200px;
-  margin-right: 200px;
+  margin-left: 300px;
+  margin-right: 300px;
 }
 .navbar a {
   color: darkgrey;
@@ -48,7 +78,23 @@ h2 {
 }
 #connect ul {
   list-style-type: none;
-  height: 100px;
-  width: 100px;
-  display: inline-block;
+  position: sticky;
+  
+}
+.fa-github{
+   font-size: 70px;
+   color: #000;
+   
+}
+.fa-linkedin{
+    font-size: 70px;
+    color: #000;
+    
+}
+.fa-github:hover{
+    color: hsl(0, 0%, 60%);
+
+}
+.fa-linkedin:hover{
+    color: hsl(0, 0%, 66%);
 }
