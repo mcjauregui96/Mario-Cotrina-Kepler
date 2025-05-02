@@ -1,22 +1,23 @@
 @keyframes slideInLeft{
     from{
-        transform: translateX(-300px);
+        transform: translateX(0%);
     }
     to{
-        transform: translateX(300px);
+        transform: translateX(100%);
     }
 }
+
 .heading-1{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 80px;
+    text-align: center;
     background-color: rgb(23, 46, 246);
-    padding: 40px;
-    margin-left: 280px;
-    margin-right: 280px;
-    font-weight: lighter;
-    color: rgb(248, 237, 27);
-    text-decoration: underline;
-    text-decoration-color: rgb(231, 40, 43);
+    color: gold;
+    width: 40%;
+    padding: 25px;
+    margin: 100px;
+    font-weight: bolder;
+    text-shadow: 5px 3px rgb(230, 43, 43);
     animation-name: slideInLeft;
     animation-duration: 5s;
     animation-timing-function: ease-in-out;
@@ -24,146 +25,95 @@
     animation-iteration-count: infinite;
     animation-direction: alternate-reverse;
     animation-fill-mode: both;
-
-    transform: translateX(-150px);
+    transform: translateX(500px); 
 }
 
 
-body{
+body {
     color: rgb(159, 19, 19);
-   background-color: rgb(79, 196, 44); 
-   font-size: 35px;
-   text-align: center;
-   font-family: "Playwrite AU SA", cursive;
-  font-size: 25px;
-  font-weight: bold;
-  line-height: 1.6;
-  margin-left: 0px;
-  margin-right: 0px;
-  padding: 0px;
+    background-color: rgb(79, 196, 44); 
+    font-size: 35px;
+    margin: auto;
+    width: 50%;
+    font-family: "Playwrite AU SA", cursive;
+    font-weight: bold;
+    line-height: 1.6;
 }
-main{
-  margin-left: 20px;
-  margin-right: 20px;
-}
+
 #about {
   text-align: center;
   list-style-type: none;
+  margin: auto;
+  width: 50%;
+  border: 5px solid black;
+  background-color: rgb(177, 238, 71);
+  overflow: hidden;
 }
-.navbar{
+#navbar {
   position: sticky;
   top: 0;
-  width: 100%;
+  overflow: hidden;
   
-
 }
-.navbar ul {
+#navbar ul {
   list-style-type: none;
-  display: flex;
-  gap: 4em;
+  display: inline-flex;
+  gap: 20px;
   background-color: rgb(192, 96, 27);
   padding: 10px;
-  margin-left: 0px;
-  margin-right: 0px;
-  overflow: hidden;
-  float: center;
-  justify-content: center;
-  
-
 }
-.navbar a {
+#navbar a {
   color: rgb(255, 255, 255);
   text-decoration: none;
   padding: 15px;
   display: block;
   text-align: center;
+  
 }
-.navbar a:hover {
+#navbar a:hover {
   background-color: hsl(27, 83%, 54%);
 }
 
 h2 {
   text-align: center;
+  color: rgb(154, 29, 7);
+  text-decoration: underline;
+
 }
-.flexbox-container{
-  height: 600px;
-  background-color: rgb(128, 12, 186);
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  align-content: flex-end;
- 
+
+.container {
+  display: grid;
+  row-gap: 50px;
+  grid-template-columns: auto auto auto;
+  background-color: rgb(247, 204, 83);
+  padding: 10px;
+  overflow: hidden;
 }
-.flexbox-item{
-  width: 200px;
-  margin: 10px;
-  border: 3px solid black;
-  background-color: white;
-  flex-wrap: wrap;
-}
-.flexbox-item-1 {
-  min-height: 200px;
-  background-color: rgb(250, 250, 128);
-  
-}
-.flexbox-item-2 {
-  min-height: 300px;
-  background-color: rgb(246, 147, 111);
-}
-.flexbox-item-3 {
-  min-height: 400px;
-  background-color: rgb(208, 208, 252);
-}
-.flexbox-item-4 {
-  min-height: 500px;
-  background-color: rgb(54, 186, 186);
-  
-}
-#experience ul {
-  list-style-type: none;
-  background-color: rgb(12, 118, 150);
-  border: 4px solid black;
+
+.container > div {
+  background-color: #f1f1f1;
+  border: 1px solid black;
   padding: 20px;
-  border-radius: 4px;
-  margin: 100px;
+  font-size: 30px;
+  text-align: center;
+  overflow-wrap: break-word;
 }
-#connect ul {
-  list-style-type: none;
-  
-  
-}
-.flexbox1-container{
-  height: 600px;
-  margin-left: 100px;
-  margin-right: 100px;
-  background-color: rgb(212, 194, 51);
+
+.flex-container {
   display: flex;
-  justify-content: space-around;
-  
+  background-color: #f1f1f1;
+  padding: 10px;
 }
-.flexbox1-item{
-  width: 200px;
-  margin: 100px;
-  border: 3px solid black;
-  background-color: white;
-  flex-wrap: wrap;
-  flex-grow: 3;
-  flex-basis: 0%;
-  
-  
-}
-.flexbox1-item-1 {
-  min-height: 300px;
-  background-color: rgb(67, 170, 218);
-  align-content: center;
-  color: rgb(22, 135, 7);
-  position: relative;
-}
-.flexbox1-item-2 {
-  min-height: 300px;
-  background-color: rgb(169, 73, 233);
-  align-content: center;
-  color: rgb(38, 141, 179);
+
+.flex-container > div {
+  background-color: rgb(178, 249, 127);
+  color: rgb(245, 153, 60);
+  margin: auto;
+  text-align: center;
+  height: 250px;
+  font-size: 30px;
+  width: 50%;
+  overflow: hidden;
 }
 .fa-github{
    font-size: 200px;
