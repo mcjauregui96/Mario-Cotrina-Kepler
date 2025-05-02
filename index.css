@@ -82,7 +82,8 @@ h2 {
 
 .container {
   display: grid;
-  row-gap: 50px;
+  row-gap: 10px;
+  column-gap: 10px;
   grid-template-columns: auto auto auto;
   background-color: rgb(247, 204, 83);
   padding: 10px;
