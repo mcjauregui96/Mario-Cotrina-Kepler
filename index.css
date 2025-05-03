@@ -87,7 +87,7 @@ h2 {
   grid-template-rows: repeat(4,1fr);
   background-color: rgb(247, 204, 83);
   padding: 10px;
-  overflow: scroll;
+  overflow: hidden;
 }
 
 .container > div {
@@ -140,5 +140,35 @@ h2 {
 
 }
 .fa-linkedin:hover{
-    color: hsl(0, 0%, 66%);
+    color:  hsl(0, 0%, 66%);
+}
+@media (max-width: 1000px){
+  body, .about, .container > div, #navbar{
+    font-size: 15px;
+  }
+  .fa-github, .fa-linkedin{
+    font-size: 150px;
+    margin: 0 auto;
+    overflow: hidden;
+    align-items: center;
+  }
+  
+  #flex-container, #flex-container >div{
+    width: 90%;
+    height: 20%;
+    margin: 0 auto;
+    font-size: 15px;
+    overflow: hidden;
+  }
+  img{
+    height: 200px;
+    width: 170px;
+
+  }
+  .heading-1{
+    font-size: 50px;
+    animation-iteration-count: 1;
+    
+    
+  }
 }
