@@ -82,13 +82,12 @@ h2 {
 
 .container {
   display: grid;
-  row-gap: 10px;
-  column-gap: 10px;
+  grid-gap:10px;
   grid-template-columns: repeat(3,1fr);
   grid-template-rows: repeat(4,1fr);
   background-color: rgb(247, 204, 83);
   padding: 10px;
-  overflow: hidden;
+  overflow: scroll;
 }
 
 .container > div {
@@ -124,8 +123,7 @@ h2 {
   height: 250px;
   font-size: 30px;
   width: 250px;
-  flex-grow: 2;
-  
+  flex: 1 1 0;
 }
 .fa-github{
    font-size: 200px;
