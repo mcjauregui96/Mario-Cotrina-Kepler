@@ -1,0 +1,174 @@
+@keyframes slideInLeft{
+    from{
+        transform: translateX(0px);
+    }
+    to{
+        transform: translateX(500px);
+    }
+}
+
+.heading-1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 80px;
+    text-align: center;
+    background-color: rgb(23, 46, 246);
+    color: gold;
+    width: 40%;
+    padding: 25px;
+    margin: 100px;
+    font-weight: bolder;
+    text-shadow: 5px 3px rgb(230, 43, 43);
+    animation-name: slideInLeft;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-fill-mode: both;
+    transform: translateX(500px); 
+}
+
+
+body {
+    color: rgb(159, 19, 19);
+    background-color: rgb(79, 196, 44); 
+    font-size: 35px;
+    margin: 100px;
+    font-family: "Playwrite AU SA", cursive;
+    font-weight: bold;
+    line-height: 1.6;
+}
+
+#about {
+  text-align: center;
+  list-style-type: none;
+  margin-left: 100px;
+  margin-right: 100px;
+  border: 5px solid black;
+  background-color: rgb(177, 238, 71);
+  overflow: hidden;
+}
+header {
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+}
+#navbar ul {
+  list-style-type: none;
+  display: inline-flex;
+  gap: 20px;
+  background-color: rgb(192, 96, 27);
+  padding: 10px;
+}
+#navbar a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  padding: 15px;
+  display: block;
+  text-align: center;
+  
+}
+#navbar a:hover {
+  background-color: hsl(27, 83%, 54%);
+}
+
+h2 {
+  text-align: center;
+  color: rgb(154, 29, 7);
+  text-decoration: underline;
+
+}
+
+.container {
+  display: grid;
+  grid-gap:10px;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(4,1fr);
+  background-color: rgb(247, 204, 83);
+  padding: 10px;
+  overflow: hidden;
+}
+
+.container > div {
+  background-color: #f1f1f1;
+  border: 1px solid black;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  overflow-wrap: break-word;
+}
+
+#flex-container {
+  width: 600px;
+  height: 250px;
+  background-color: #f1f1f1;
+  margin: 80px auto;
+  border: 5px solid black;
+  border-radius: 12px;
+  display: flex;
+  flex-wrap: row wrap;
+  padding: 30px;
+  justify-content: space-evenly;
+  align-items: center;
+  column-gap: 30px;
+  
+}
+
+#flex-container > div {
+  background-color: rgb(178, 249, 127);
+  color: rgb(245, 153, 60);
+  margin: 80px auto;
+  text-align: center;
+  height: 250px;
+  font-size: 30px;
+  width: 250px;
+  flex: 1 1 0;
+}
+.fa-github{
+   font-size: 200px;
+   color: #000;
+   
+}
+.fa-linkedin{
+    font-size: 200px;
+    color: #000;
+    
+}
+.fa-github:hover{
+    color: hsl(0, 0%, 60%);
+
+}
+.fa-linkedin:hover{
+    color:  hsl(0, 0%, 66%);
+}
+@media (max-width: 1000px){
+  body, .about, .container > div, #navbar{
+    font-size: 15px;
+  }
+  .fa-github, .fa-linkedin{
+    font-size: 150px;
+    margin: 0 auto;
+    overflow: hidden;
+    align-items: center;
+  }
+  
+  #flex-container, #flex-container >div{
+    width: 90%;
+    height: 20%;
+    margin: 0 auto;
+    font-size: 15px;
+    overflow: hidden;
+  }
+  img{
+    height: 200px;
+    width: 170px;
+
+  }
+  .heading-1{
+    font-size: 50px;
+    animation-iteration-count: 1;
+    
+    
+  }
+}

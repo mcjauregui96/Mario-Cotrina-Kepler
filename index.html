@@ -8,55 +8,106 @@
       name="description"
       content="A personal website that showcases my experiences."
     />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   <body>
-      <h1>Mario Cotrina</h1>
-
-      <section id="about">
-        <h2>About</h2>
-        <img
-          src="profile_pic.jpg"
-          alt="profile picture"
-          width="250"
-          height="300"
-        />
+  </head>
+    <h1 class="heading-1">Mario Cotrina</h1>
+  <header>
+        <nav id="navbar">
+          <ul>
+          
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#experience">Experience</a></li>
+            <li><a href="index.html#connect">Connect</a></li>
+            <li><a href="index.html#skills">Skills</a></li>
+           <li><a href="index.html#projects">Projects</a></li>
+          </ul>
+        </nav>
+  </header> 
+      <br>
+      <br>
+      <br>
+    
+  <main>
+    <section id="about">
+      <br>
+        <h2>About me</h2>
+        <br />
+        <img src="Subject.png" alt="headshot" width="250" height="300" />
+        <br />
         <p>
           Hi, I'm Mario! I was born in Peru. Currently enrolled in college
           seeking my cybersecurity degree at NOVA. I work for a construction
-          company doing drywall and paint work.
+          company doing drywall and paint work. On my free time I like to go to
+          concerts and listen to audiobooks.
         </p>
-      </section>
-      <section id="experience">
-        <h2>Experience</h2>
-        <ul>
-          <li>Python</li>
-          <li>Linux</li>
-          <li>Windows Server 2019</li>
-          <li>Security+ certified</li>
-        </ul>
-      </section>
-      <section id="connect">
-        <h2>Connect</h2>
-        <ul>
-          <li>
-            <a
-              href="https://github.com/dashboard"
-              target="_blank"
-              rel="noopener noreferrer"
-              >github</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://www.linkedin.com/feed/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >linkedin</a
-            >
-          </li>
-        </ul>
-      </section>
-  
+    </section>
+      <br>
+    <section id="experience">
+      <h2>Experiences</h2>
+        
+      <br>
+      <div class="container">
+        <div>Security+</div>
+        <div>Took the course in college and got certified</div>
+        <div>2022</div>
+        <div>Linux</div>
+        <div>Took the course in college</div>
+        <div>2023</div>
+        <div>Python</div>
+        <div>Took the course in college</div>
+        <div>2023</div>
+        <div>Windows Server 2019</div>
+        <div>Took the course in college</div>
+        <div>2024</div>
+      </div>
+      <br> 
+    </section>
+      <br>
+    <section id="connect">
+      <h2>Connect:</h2>
+      <br>
+      <div id="flex-container">
+        <div>Github
+            <br>
+            <a href="https://github.com/dashboard" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </div>     
+        <div>Linkedin
+            <br>
+            <a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+        </div> 
+        </div>
+    </section>
+        
+    <br>
+    <section id="skills">
+      <h2>Skills</h2>
+      <br>
+      <ul> </ul>
+    </section>
+      <br>
+    <section id="projects">
+      <h2>Projects</h2>
+      <br>
+      <ul> </ul>
+    </section>
+  </main>
   </body>
 </html>
