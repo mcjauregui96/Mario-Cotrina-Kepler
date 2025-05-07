@@ -1,9 +1,12 @@
+/* desktop-first - Desktop Styles */
+
+/* Head title "Mario Cotrina"  */
 @keyframes slideInLeft{
     from{
         transform: translateX(0px);
     }
     to{
-        transform: translateX(500px);
+        transform: translateX(350px);
     }
 }
 
@@ -15,7 +18,7 @@
     color: gold;
     width: 40%;
     padding: 25px;
-    margin: 100px;
+    margin: 6rem;
     font-weight: bolder;
     text-shadow: 5px 3px rgb(230, 43, 43);
     animation-name: slideInLeft;
@@ -25,29 +28,29 @@
     animation-iteration-count: infinite;
     animation-direction: alternate-reverse;
     animation-fill-mode: both;
-    transform: translateX(500px); 
+    transform: translateX(500px);
 }
-
-
+/* Body section */
 body {
     color: rgb(159, 19, 19);
     background-color: rgb(79, 196, 44); 
     font-size: 35px;
-    margin: 100px;
+    margin: 20px;
     font-family: "Playwrite AU SA", cursive;
     font-weight: bold;
     line-height: 1.6;
 }
-
+/* First element "About"*/
 #about {
   text-align: center;
   list-style-type: none;
-  margin-left: 100px;
-  margin-right: 100px;
+  margin-left: none;
+  margin-right: none;
   border: 5px solid black;
   background-color: rgb(177, 238, 71);
-  overflow: hidden;
+  overflow-wrap: break-word;
 }
+/* Navbar */
 header {
   display: flex;
   justify-content: center;
@@ -72,14 +75,14 @@ header {
 #navbar a:hover {
   background-color: hsl(27, 83%, 54%);
 }
-
+/* All h2 subtitles */
 h2 {
   text-align: center;
   color: rgb(154, 29, 7);
   text-decoration: underline;
 
 }
-
+/* Second element "Experiences" grid */
 .container {
   display: grid;
   grid-gap:10px;
@@ -98,7 +101,7 @@ h2 {
   text-align: center;
   overflow-wrap: break-word;
 }
-
+/* Third element "Connect" flexbox */
 #flex-container {
   width: 600px;
   height: 250px;
@@ -125,6 +128,7 @@ h2 {
   width: 250px;
   flex: 1 1 0;
 }
+/* Icon logos */
 .fa-github{
    font-size: 200px;
    color: #000;
@@ -142,9 +146,10 @@ h2 {
 .fa-linkedin:hover{
     color:  hsl(0, 0%, 66%);
 }
-@media (max-width: 1000px){
-  body, .about, .container > div, #navbar{
-    font-size: 15px;
+/* Tablet Styles */
+@media screen and (max-width: 1024px){
+  body, #about, .container > div, #navbar{
+    font-size: 20px;
   }
   .fa-github, .fa-linkedin{
     font-size: 150px;
@@ -157,8 +162,10 @@ h2 {
     width: 90%;
     height: 20%;
     margin: 0 auto;
+    padding: 15px;
     font-size: 15px;
     overflow: hidden;
+    background-color: rgb(118, 104, 212);
   }
   img{
     height: 200px;
@@ -167,8 +174,99 @@ h2 {
   }
   .heading-1{
     font-size: 50px;
+    background-color: darkorange;
+    color: rgb(17, 117, 112);
+
+    
+  }
+  body {
+    background-color: lightblue;
+  }
+  #about {
+    background-color: rgb(234, 139, 234);
+    margin: 2rem;
+    color: rgb(82, 14, 185);
+  }
+  h2 {
+    color: seagreen;
+  
+  }
+  #navbar ul{
+    background-color: rgb(85, 111, 40);
+    margin-left: 25rem;
+    margin-right: 25rem;
+
+  }
+  .container > div {
+    background-color: #40f6c5;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+
+/* Phone styles */
+@media screen and (max-width: 25rem){
+  body, #about, .container > div, #navbar{
+    font-size: 10px;
+  }
+  .fa-github, .fa-linkedin{
+    font-size: 50px;
+    margin: 0 auto;
+    overflow: hidden;
+    align-items: center;
+  }
+  
+  #flex-container, #flex-container >div{
+    width: 90%;
+    height: 20%;
+    margin: 0 auto;
+    font-size: 10px;
+    overflow: hidden;
+    background-color: orange;
+    color: #5986ee;
+  }
+  img{
+    height: 15rem;
+    width: 12rem;
+
+  }
+  .heading-1{
+    font-size: 40px;
+    color: rgb(75, 112, 244);
+    text-shadow: 5px 2px rgb(245, 250, 90);
     animation-iteration-count: 1;
+    background-color: rgb(241, 105, 90);
+    font-style: normal;
+    border-radius: 20px;
     
+  }
+  #navbar ul{
+    background-color: rgb(221, 221, 83);
+    overflow: visible;
+    gap: 9px;
+    margin-left: 10rem;
+    margin-right: 10rem;
     
+  }
+  .container > div {
+    background-color: #7fbafd;
+    border: 3px solid rgb(8, 51, 105);
+    padding: 15px;
+    font-size: 12px;
+    text-align: center;
+    overflow-wrap: break-word;
+    border-radius: 20px;
+    margin-left: 0rem;
+    margin-right: 0rem;
+  }
+  #about {
+    background-color: rgb(253, 182, 50);
+    margin: 1rem;
+    color: rgb(82, 14, 185);
+    border-radius: 12px;
+  }
+  h2 {
+    color: rgb(230, 56, 236);
+  
   }
 }
