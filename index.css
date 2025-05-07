@@ -30,7 +30,7 @@
     animation-fill-mode: both;
     transform: translateX(500px);
 }
-
+/* Body section */
 body {
     color: rgb(159, 19, 19);
     background-color: rgb(79, 196, 44); 
@@ -50,6 +50,7 @@ body {
   background-color: rgb(177, 238, 71);
   overflow-wrap: break-word;
 }
+/* Navbar */
 header {
   display: flex;
   justify-content: center;
@@ -74,14 +75,14 @@ header {
 #navbar a:hover {
   background-color: hsl(27, 83%, 54%);
 }
-
+/* All h2 subtitles */
 h2 {
   text-align: center;
   color: rgb(154, 29, 7);
   text-decoration: underline;
 
 }
-/* Second element "Experiences" */
+/* Second element "Experiences" grid */
 .container {
   display: grid;
   grid-gap:10px;
@@ -100,7 +101,7 @@ h2 {
   text-align: center;
   overflow-wrap: break-word;
 }
-/* Third element "Connect"*/
+/* Third element "Connect" flexbox */
 #flex-container {
   width: 600px;
   height: 250px;
@@ -127,6 +128,7 @@ h2 {
   width: 250px;
   flex: 1 1 0;
 }
+/* Icon logos */
 .fa-github{
    font-size: 200px;
    color: #000;
@@ -240,7 +242,9 @@ h2 {
   #navbar ul{
     background-color: rgb(221, 221, 83);
     overflow: visible;
-    gap: 10px;
+    gap: 9px;
+    margin-left: 10rem;
+    margin-right: 10rem;
     
   }
   .container > div {
@@ -249,6 +253,13 @@ h2 {
     padding: 15px;
     
   }
-
-};
+  #about {
+    background-color: rgb(253, 182, 50);
+    margin: 1rem;
+    color: rgb(82, 14, 185);
+  }
+  h2 {
+    color: rgb(230, 56, 236);
   
+  }
+}
