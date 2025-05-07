@@ -195,6 +195,10 @@ h2 {
     margin-right: 25rem;
 
   }
+  .container > div {
+    background-color: #40f6c5;
+    border: 1px solid black;
+    padding: 10px;
 }
 
 
@@ -216,6 +220,8 @@ h2 {
     margin: 0 auto;
     font-size: 10px;
     overflow: hidden;
+    background-color: orange;
+    color: #5986ee;
   }
   img{
     height: 15rem;
