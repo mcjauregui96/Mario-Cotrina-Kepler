@@ -1,5 +1,6 @@
-/* laptop/desktop code style */
+/* laptop/desktop-first code style */
 
+/* Head title "Mario Cotrina"  */
 @keyframes slideInLeft{
     from{
         transform: translateX(0px);
@@ -8,8 +9,6 @@
         transform: translateX(350px);
     }
 }
-
-
 
 .heading-1{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -31,6 +30,7 @@
     animation-fill-mode: both;
     transform: translateX(500px);
 }
+
 body {
     color: rgb(159, 19, 19);
     background-color: rgb(79, 196, 44); 
@@ -40,7 +40,7 @@ body {
     font-weight: bold;
     line-height: 1.6;
 }
-
+/* First element "About"*/
 #about {
   text-align: center;
   list-style-type: none;
@@ -81,7 +81,7 @@ h2 {
   text-decoration: underline;
 
 }
-
+/* Second element "Experiences" */
 .container {
   display: grid;
   grid-gap:10px;
@@ -100,7 +100,7 @@ h2 {
   text-align: center;
   overflow-wrap: break-word;
 }
-
+/* Third element "Connect"*/
 #flex-container {
   width: 600px;
   height: 250px;
@@ -200,7 +200,7 @@ h2 {
 
 /* phone style code */
 @media screen and (max-width: 25rem){
-  body, .about, .container > div, #navbar{
+  body, #about, .container > div, #navbar{
     font-size: 10px;
   }
   .fa-github, .fa-linkedin{
@@ -236,8 +236,12 @@ h2 {
     overflow: visible;
     gap: 10px;
     
-
-
+  }
+  .container > div {
+    background-color: #7fbafd;
+    border: 1px solid black;
+    padding: 15px;
+    
   }
 
 };
