@@ -85,7 +85,7 @@
     grid-template-rows: repeat(4,1fr);
     background-color: rgb(247, 204, 83);
     padding: 10px;
-    overflow: hidden;
+    overflow:scroll;
   }
   
   .container > div {
@@ -143,7 +143,28 @@
     height: 180px;
     width: 150px;
   }
+  /* This is the skills section */
+  #skills> ul{
+    list-style-type: none;
+    display:grid; 
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2,1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+    height: 300px;
+    max-width: 600px;
+    margin: 10px;
+    padding: 20px;
+    align-items: center;
+    color: #40f6c5;
+    background-color: rgb(246, 74, 143);
+    overflow-wrap: break-word;
+    border-radius: 12px;
+  }
+  
+  
 }
+  
 
 /* Tablet Style */
 @media (min-width: 768px){
@@ -228,6 +249,24 @@
     margin: 1rem;
     overflow: hidden;
     align-items: center;
+  }
+   /* This is the skills section */
+   #skills >ul{
+    list-style-type: none;
+    display:grid; 
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2,1fr);
+    column-gap: 35px 35px;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+    border: 5px solid black;
+    color: #4040f6;
+    background-color: rgb(240, 246, 74);
+    overflow-wrap: break-word;
+    justify-content: space-evenly;
   }
 }
 /* Desktop Styles */
@@ -369,5 +408,22 @@
     margin: 1rem;
     overflow: hidden;
     align-items: center;
+  }
+  #skills >ul{
+    list-style-type: none;
+    display:grid; 
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2,1fr);
+    column-gap: 50px 50px;
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+    border: 5px solid black;
+    color: #4040f6;
+    background-color: rgb(240, 246, 74);
+    overflow-wrap: break-word;
+    justify-content: space-evenly;
   }
 }
