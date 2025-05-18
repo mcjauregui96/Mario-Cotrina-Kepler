@@ -204,10 +204,7 @@
     color: rgb(82, 14, 185);
     font-family: Arial, Helvetica, sans-serif;
   }
-  h2 {
-    color: seagreen;
-  
-  }
+
   #navbar ul{
     
     display: inline-flex;
@@ -349,13 +346,7 @@
   #navbar a:hover {
     background-color: hsl(27, 83%, 54%);
   }
-  /* All h2 subtitles */
-  h2 {
-    text-align: center;
-    color: rgb(154, 29, 7);
-    text-decoration: underline;
   
-  }
   /* Second element "Experiences" grid */
   .container {
     display: grid;
@@ -368,10 +359,10 @@
   }
   
   .container > div {
-    background-color: #f1f1f1;
-    border: 1px solid black;
-    padding: 20px;
-    font-size: 30px;
+    background-color: #7fbafd;
+    border: 3px solid rgb(8, 51, 105);
+    padding: 15px;
+    font-size: 12px;
     text-align: center;
     overflow-wrap: break-word;
   }
@@ -403,12 +394,20 @@
     flex: 1 1 0;
   }
 
-  .fa-github, .fa-linkedin{
+  .fa-github{
     font-size: 200px;
     margin: 1rem;
     overflow: hidden;
     align-items: center;
   }
+
+  .fa-linkedin{
+    font-size: 200px;
+    margin: 1rem;
+    overflow: hidden;
+    align-items: center;
+  }
+
   #skills >ul{
     list-style-type: none;
     display:grid; 
