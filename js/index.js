@@ -31,3 +31,51 @@ for (let i= 0; i< skills.length; i++){
     skillsList.appendChild(skill);
     console.log(skillsList);
 }
+
+// Handle form submission
+const messageForm= document.querySelector("leave_message");
+messageForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+// Get form values
+    const usersName= event.target.userName.value;
+    const usersEmail= event.target.usersEmail.value;
+    const usersMessage= event.target.usersMessage.value;
+    console.log('Name:',usersName);   
+    console.log('Email:',usersEmail);
+    console.log('Message:',usersMessage); 
+    
+
+    //Display mnessage
+    const messageSection= document.querySelector('#messages');
+    const messageList= messageSection.querySelector('ul');
+    
+    messageSection.hidden= false;
+    const newMessage= document.createElement('li');
+    newString= `<a href= "mailto:${usersEmail}">${usersName}</a>\n
+        <span>${usersMessage}</span>`;
+    newMessage.innerHTML= newString;
+
+    const removeButton= document.createElement('button');
+    removeButton.textContent= 'Remove';
+    removeButton.type= 'button';
+    removeButton.addEventListener('click', function(){
+        newMessage.remove();
+        toggleMessageSection();
+    });
+    newMessage.appendChild(removeButton);
+    messageList.appendChild(newMessage);
+
+    messageSection.computedStyleMap.display= 'block';
+
+    event.target.removeEventListener();
+    });
+
+    function toggleMessageSection(){
+        const messageSection= document.querySelector('#messages');
+        const messageList= messageSection.querySelector('ul');
+        if (messageList.chiuldrenb.length === 0){
+            messageSection.computedStyleMap.display= 'none';
+        }
+    }
+    toggleMessageSection();
+
