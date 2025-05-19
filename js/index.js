@@ -25,6 +25,7 @@ for (let i = 0; i < skills.length; i++) {
   skillsList.appendChild(skill);
 }
 
+<<<<<<< HEAD
 // Handle form submission
 const messageForm= document.querySelector('form[name="leave_message"]')
 messageForm.addEventListener("submit", function(event){
@@ -85,6 +86,8 @@ messageForm.addEventListener("submit", function(event){
   toggleMessageSection();
 })
 
+=======
+>>>>>>> 33fc8f1e149236af3b0fe938f49739187afd9a37
 
 
 
