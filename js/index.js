@@ -33,11 +33,11 @@ for (let i= 0; i< skills.length; i++){
 }
 
 // Handle form submission
-const messageForm= document.querySelector("leave_message");
-messageForm.addEventListener("submit", function(event) {
-    event.preventDefault();
+const messageForm= document.querySelector('form[name="leave_message"]')
+messageForm.addEventListener("submit", function(event) {// add submit button
+    event.preventDefault();// prevents default refreshing behavior
 // Get form values
-    const usersName= event.target.userName.value;
+    const usersName= event.target.usersName.value;
     const usersEmail= event.target.usersEmail.value;
     const usersMessage= event.target.usersMessage.value;
     console.log('Name:',usersName);   
@@ -48,33 +48,41 @@ messageForm.addEventListener("submit", function(event) {
     //Display mnessage
     const messageSection= document.querySelector('#messages');
     const messageList= messageSection.querySelector('ul');
-    
-    messageSection.hidden= false;
     const newMessage= document.createElement('li');
-    newString= `<a href= "mailto:${usersEmail}">${usersName}</a>\n
+    newMessage.innerHTML= `<a href= "mailto:${usersEmail}">${usersName}</a>\n
         <span>${usersMessage}</span>`;
-    newMessage.innerHTML= newString;
-
+    
+// Create remove button
     const removeButton= document.createElement('button');
-    removeButton.textContent= 'Remove';
+    removeButton.innerText= 'Remove';
     removeButton.type= 'button';
     removeButton.addEventListener('click', function(){
         newMessage.remove();
         toggleMessageSection();
     });
+// Create edit button
+    const editButton= document.createElement('button');
+    editButton.innerText='edit';
+    editButton.type='button';
+    editButton.addEventListener('click', function(edit){
+        const span= edit.target.parentNode.querySelector('span');
+        const newText= prompt('Edit your message:', span.innerText);
+        if (newText) span.innerText= newText;
+    });
     newMessage.appendChild(removeButton);
+    newMessage.appendChild(editButton);
     messageList.appendChild(newMessage);
 
-    messageSection.computedStyleMap.display= 'block';
+    messageSection.style.display= 'block';
 
-    event.target.removeEventListener();
+    event.target.reset();
     });
-
+// Hide messages section
     function toggleMessageSection(){
         const messageSection= document.querySelector('#messages');
         const messageList= messageSection.querySelector('ul');
-        if (messageList.chiuldrenb.length === 0){
-            messageSection.computedStyleMap.display= 'none';
+        if (messageList.children.length === 0){
+            messageSection.style.display= 'none';
         }
     }
     toggleMessageSection();
