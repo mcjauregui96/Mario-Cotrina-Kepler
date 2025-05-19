@@ -31,3 +31,59 @@ for (let i= 0; i< skills.length; i++){
     skillsList.appendChild(skill);
     console.log(skillsList);
 }
+
+// Handle form submission
+const messageForm= document.querySelector('form[name="leave_message"]')
+messageForm.addEventListener("submit", function(event) {// add submit button
+    event.preventDefault();// prevents default refreshing behavior
+// Get form values
+    const usersName= event.target.usersName.value;
+    const usersEmail= event.target.usersEmail.value;
+    const usersMessage= event.target.usersMessage.value;
+    console.log('Name:',usersName);   
+    console.log('Email:',usersEmail);
+    console.log('Message:',usersMessage); 
+    
+
+    //Display mnessage
+    const messageSection= document.querySelector('#messages');
+    const messageList= messageSection.querySelector('ul');
+    const newMessage= document.createElement('li');
+    newMessage.innerHTML= `<a href= "mailto:${usersEmail}">${usersName}</a>\n
+        <span>${usersMessage}</span>`;
+    
+// Create remove button
+    const removeButton= document.createElement('button');
+    removeButton.innerText= 'Remove';
+    removeButton.type= 'button';
+    removeButton.addEventListener('click', function(){
+        newMessage.remove();
+        toggleMessageSection();
+    });
+// Create edit button
+    const editButton= document.createElement('button');
+    editButton.innerText='edit';
+    editButton.type='button';
+    editButton.addEventListener('click', function(edit){
+        const span= edit.target.parentNode.querySelector('span');
+        const newText= prompt('Edit your message:', span.innerText);
+        if (newText) span.innerText= newText;
+    });
+    newMessage.appendChild(removeButton);
+    newMessage.appendChild(editButton);
+    messageList.appendChild(newMessage);
+
+    messageSection.style.display= 'block';
+
+    event.target.reset();
+    });
+// Hide messages section
+    function toggleMessageSection(){
+        const messageSection= document.querySelector('#messages');
+        const messageList= messageSection.querySelector('ul');
+        if (messageList.children.length === 0){
+            messageSection.style.display= 'none';
+        }
+    }
+    toggleMessageSection();
+
