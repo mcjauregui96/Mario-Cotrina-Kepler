@@ -85,7 +85,7 @@
     grid-template-rows: repeat(4,1fr);
     background-color: rgb(247, 204, 83);
     padding: 10px;
-    overflow: hidden;
+    overflow:scroll;
   }
   
   .container > div {
@@ -143,7 +143,60 @@
     height: 180px;
     width: 150px;
   }
+  /* This is the skills section */
+  #skills> ul{
+    list-style-type: none;
+    display:grid; 
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2,1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+    height: 300px;
+    max-width: 600px;
+    margin: 10px;
+    padding: 20px;
+    align-items: center;
+    color: #40f6c5;
+    background-color: rgb(246, 74, 143);
+    overflow-wrap: break-word;
+    border-radius: 12px;
+  }
+  /* Leave a message section*/
+  form{
+    margin: 20px 0;
+    padding: 40px;
+    background: #8e6bfa;
+    border-radius: 10px;
+  }
+  label{
+    display: block;
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  input, textarea{
+    width: 60%;
+    height: 3rem;
+    border: 5px solid #8234ff;
+    border-radius: 5px;
+    font-size: 20px;
+  }
+  button[type="submit"]{
+    background: #f471e2;
+    color: rgb(11, 46, 61);
+    cursor: pointer;
+    padding: 20px 15px;
+    font-size: 20px;
+  }
+  #messages{
+    background: #60d7fb;
+  }
+  
+  #messages ul{
+    list-style: none;
+  }
+  
 }
+  
 
 /* Tablet Style */
 @media (min-width: 768px){
@@ -183,10 +236,7 @@
     color: rgb(82, 14, 185);
     font-family: Arial, Helvetica, sans-serif;
   }
-  h2 {
-    color: seagreen;
-  
-  }
+
   #navbar ul{
     
     display: inline-flex;
@@ -229,6 +279,26 @@
     overflow: hidden;
     align-items: center;
   }
+   /* This is the skills section */
+   #skills >ul{
+    list-style-type: none;
+    display:grid; 
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2,1fr);
+    column-gap: 35px 35px;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+    border: 5px solid black;
+    color: #4040f6;
+    background-color: rgb(240, 246, 74);
+    overflow-wrap: break-word;
+    justify-content: space-evenly;
+  }
+
+  
 }
 /* Desktop Styles */
 @keyframes slideInLeft{
@@ -236,7 +306,7 @@
       transform: translateX(0px);
   }
   to{
-      transform: translateX(350px);
+      transform: translateX(550px);
   }
 }
 @media (min-width: 1024px){
@@ -263,7 +333,7 @@
   /* Body section */
   body {
     color: rgb(159, 19, 19);
-    background-color: rgb(79, 196, 44); 
+    background-color: rgb(44, 161, 8); 
     font-size: 50px;
     margin: 20px;
     font-family: "Playwrite AU SA", cursive;
@@ -310,13 +380,7 @@
   #navbar a:hover {
     background-color: hsl(27, 83%, 54%);
   }
-  /* All h2 subtitles */
-  h2 {
-    text-align: center;
-    color: rgb(154, 29, 7);
-    text-decoration: underline;
   
-  }
   /* Second element "Experiences" grid */
   .container {
     display: grid;
@@ -329,10 +393,10 @@
   }
   
   .container > div {
-    background-color: #f1f1f1;
-    border: 1px solid black;
-    padding: 20px;
-    font-size: 30px;
+    background-color: #7fbafd;
+    border: 3px solid rgb(8, 51, 105);
+    padding: 15px;
+    font-size: 12px;
     text-align: center;
     overflow-wrap: break-word;
   }
@@ -364,10 +428,36 @@
     flex: 1 1 0;
   }
 
-  .fa-github, .fa-linkedin{
+  .fa-github{
     font-size: 200px;
     margin: 1rem;
     overflow: hidden;
     align-items: center;
   }
+
+  .fa-linkedin{
+    font-size: 200px;
+    margin: 1rem;
+    overflow: hidden;
+    align-items: center;
+  }
+
+  #skills >ul{
+    list-style-type: none;
+    display:grid; 
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2,1fr);
+    column-gap: 50px 50px;
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+    border: 5px solid black;
+    color: #4040f6;
+    background-color: rgb(240, 246, 74);
+    overflow-wrap: break-word;
+    justify-content: space-evenly;
+  }
+
 }
