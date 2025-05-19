@@ -161,7 +161,39 @@
     overflow-wrap: break-word;
     border-radius: 12px;
   }
+  /* Leave a message section*/
+  form{
+    margin: 20px 0;
+    padding: 40px;
+    background: #8e6bfa;
+    border-radius: 10px;
+  }
+  label{
+    display: block;
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  input, textarea{
+    width: 60%;
+    height: 3rem;
+    border: 5px solid #8234ff;
+    border-radius: 5px;
+    font-size: 20px;
+  }
+  button[type="submit"]{
+    background: #f471e2;
+    color: rgb(11, 46, 61);
+    cursor: pointer;
+    padding: 20px 15px;
+    font-size: 20px;
+  }
+  #messages{
+    background: #60d7fb;
+  }
   
+  #messages ul{
+    list-style: none;
+  }
   
 }
   
@@ -265,6 +297,8 @@
     overflow-wrap: break-word;
     justify-content: space-evenly;
   }
+
+  
 }
 /* Desktop Styles */
 @keyframes slideInLeft{
@@ -272,7 +306,7 @@
       transform: translateX(0px);
   }
   to{
-      transform: translateX(350px);
+      transform: translateX(550px);
   }
 }
 @media (min-width: 1024px){
@@ -299,7 +333,7 @@
   /* Body section */
   body {
     color: rgb(159, 19, 19);
-    background-color: rgb(79, 196, 44); 
+    background-color: rgb(44, 161, 8); 
     font-size: 50px;
     margin: 20px;
     font-family: "Playwrite AU SA", cursive;
@@ -425,4 +459,5 @@
     overflow-wrap: break-word;
     justify-content: space-evenly;
   }
+
 }
