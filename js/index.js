@@ -25,7 +25,6 @@ for (let i = 0; i < skills.length; i++) {
   skillsList.appendChild(skill);
 }
 
-<<<<<<< HEAD
 // Handle form submission
 const messageForm= document.querySelector('form[name="leave_message"]')
 messageForm.addEventListener("submit", function(event){
@@ -84,11 +83,69 @@ messageForm.addEventListener("submit", function(event){
     }
   }
   toggleMessageSection();
+  
 })
 
-=======
->>>>>>> 33fc8f1e149236af3b0fe938f49739187afd9a37
+// Creating you fetch
+/*
+async function fetchData(){
+  try{
+    const response = await fetch('https://api.github.com/users/{mcjauregui96}/repos');
+    
+    if (!response.ok) {
+      throw new Error('Request failed');
+    }
+    const data= await response.json(); 
+    console.log(data);
+  } 
+  catch (error) {
+    console.error('An error occurred:', error);
+  }
+}
 
+fetchData();
+*/
 
-
-
+// Replace with your GitHub username
+const GITHUB_USERNAME = 'mcjauregui96';
+// Fetch GitHub repositories
+fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos`)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
+  .then(repositories => {
+    console.log('Repositories:', repositories);
+    
+    // Select DOM elements
+    const projectSection = document.getElementById('projects');
+    const projectList = projectSection.querySelector('ul');
+    
+    // Clear any existing content
+    projectList.innerHTML = '';
+    
+    // Loop through repositories and create list items
+    for (let i = 0; i < repositories.length; i++) {
+      const project = document.createElement('li');
+      project.textContent = repositories[i].name;
+      
+      // Optional: Add link to repository
+      const link = document.createElement('a');
+      link.href = repositories[i].html_url;
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      link.appendChild(project);
+      
+      projectList.appendChild(link);
+    }
+  })
+  .catch(error => {
+    console.error('Error fetching repositories:', error);
+    
+    // Display error message to user
+    const projectSection = document.getElementById('projects');
+    const projectList = projectSection.querySelector('ul');
+    projectList.innerHTML = '<li>Unable to load projects. Please try again later.</li>';
+  });
