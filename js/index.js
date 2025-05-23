@@ -142,22 +142,3 @@ fetch(`https://api.github.com/users/mcjauregui96/repos`)
     projectList.innerHTML = '<li>Unable to load projects. Please try again later.</li>';
   }); */
 
-// Creating you fetch
-/*
-async function fetchData(){
-  try{
-    const response = await fetch('https://api.github.com/users/{mcjauregui96}/repos');
-    
-    if (!response.ok) {
-      throw new Error('Request failed');
-    }
-    const data= await response.json(); 
-    console.log(data);
-  } 
-  catch (error) {
-    console.error('An error occurred:', error);
-  }
-}
-
-fetchData();
-*/
