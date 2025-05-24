@@ -82,7 +82,7 @@ messageForm.addEventListener("submit", function (event) {
     }
   }
   toggleMessageSection();
-});
+})
 
 // Get GitHub repositories
 fetch(`https://api.github.com/users/mcjauregui96/repos`)
@@ -94,22 +94,20 @@ fetch(`https://api.github.com/users/mcjauregui96/repos`)
   })
 
   //Store data
-  .then((data) => {
-    console.log("JSON data=", data);
-    repositories = [data];
-    console.log("repositories array =", repositories);
-
+  .then((repositories) => {
+    console.log("JSON data=", repositories);
+  
     //Display repositories in list
     const projectSection = document.getElementById("projects");
     const projectList = projectSection.querySelector("ul");
 
     // Create a for loop to iterate over your repositories Array, starting at index 0
     for (let i = 0; i < repositories.length; i++) {
-      const project = document.createElement("li");
+      const project = document.createElement('li');
       project.innerText = repositories[i].name;
       projectList.appendChild(project);
-    }
-      
+    
+    } 
   })
    
   .catch((error) => {
