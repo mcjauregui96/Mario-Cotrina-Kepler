@@ -273,7 +273,9 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    text-decoration: underline 5px brown;
+    text-decoration: underline 5px rgb(15, 4, 4);
+    text-shadow: 5px 2px rgb(23, 12, 12);
+
   }
   #navbar a {
     padding: 20px;

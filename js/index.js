@@ -86,7 +86,7 @@ messageForm.addEventListener("submit", function (event) {
 
 // Get GitHub repositories
 fetch(`https://api.github.com/users/mcjauregui96/repos`)
-  .then((response) => {
+  .then(response => {
     if (!response.ok) {
       throw new Error("Request failed");
     }
@@ -94,8 +94,8 @@ fetch(`https://api.github.com/users/mcjauregui96/repos`)
   })
 
   //Store data
-  .then((repositories) => {
-    console.log("JSON data=", repositories);
+  .then(repositories => {
+    console.log(repositories);
   
     //Display repositories in list
     const projectSection = document.getElementById("projects");
