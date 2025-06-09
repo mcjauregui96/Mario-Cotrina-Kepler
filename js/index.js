@@ -26,41 +26,41 @@ for (let i = 0; i < skills.length; i++) {
 }
 
 // Handle form submission
-const messageForm= document.querySelector('form[name="leave_message"]')
-messageForm.addEventListener("submit", function(event){
+const messageForm = document.querySelector('form[name="leave_message"]');
+messageForm.addEventListener("submit", function (event) {
   event.preventDefault();
-// Get data
-  const usersName= event.target.usersName.value;
-  const usersEmail= event.target.usersEmail.value;
-  const usersMessage= event.target.usersMessage.value;
-  console.log('Name:',usersName);
-  console.log('Email:',usersEmail);
-  console.log('Message:',usersMessage);
+  // Get data
+  const usersName = event.target.usersName.value;
+  const usersEmail = event.target.usersEmail.value;
+  const usersMessage = event.target.usersMessage.value;
+  console.log("Name:", usersName);
+  console.log("Email:", usersEmail);
+  console.log("Message:", usersMessage);
 
   //Display message
-  const messageSection= document.querySelector('#messages');
-  const messageList= messageSection.querySelector('ul');
-  const newMessage= document.createElement('li');
-  newMessage.innerHTML= `<a href= "mailto:${usersEmail}">${usersName}</a>\n
+  const messageSection = document.querySelector("#messages");
+  const messageList = messageSection.querySelector("ul");
+  const newMessage = document.createElement("li");
+  newMessage.innerHTML = `<a href= "mailto:${usersEmail}">${usersName}</a>\n
     <span>${usersMessage}</span>`;
 
   // Create remove button
-  const removeButton= document.createElement('button');
-  removeButton.innerText='remove';
-  removeButton.type='button';
-  removeButton.addEventListener('click', function(e){
+  const removeButton = document.createElement("button");
+  removeButton.innerText = "remove";
+  removeButton.type = "button";
+  removeButton.addEventListener("click", function (e) {
     e.target.parentNode.remove();
     toggleMessageSection();
   });
 
   //Create edit button
-  const editButton= document.createElement('button');
-  editButton.innerText='edit';
-  editButton.type='button';
-  editButton.addEventListener('click', function(edit){
-    const span=edit.target.parentNode.querySelector('span');
-    const newText= prompt('Edit your message:', span.innerText);
-    if (newText) span.innerText= newText;
+  const editButton = document.createElement("button");
+  editButton.innerText = "edit";
+  editButton.type = "button";
+  editButton.addEventListener("click", function (edit) {
+    const span = edit.target.parentNode.querySelector("span");
+    const newText = prompt("Edit your message:", span.innerText);
+    if (newText) span.innerText = newText;
   });
 
   //Append buttons and message
@@ -68,24 +68,75 @@ messageForm.addEventListener("submit", function(event){
   newMessage.appendChild(editButton);
   messageList.appendChild(newMessage);
 
-  
-//Reset form
+  //Reset form
   event.target.reset();
 
   //Hide messages section
-  function toggleMessageSection(){
-    const messageSection= document.querySelector('#messages');
-    const messageList= messageSection.querySelector('ul');
-    if (messageList.children.length === 0){
-      messageSection.style.display= 'none';
-    } else{
-      messageSection.style.display='block';
+  function toggleMessageSection() {
+    const messageSection = document.querySelector("#messages");
+    const messageList = messageSection.querySelector("ul");
+    if (messageList.children.length === 0) {
+      messageSection.style.display = "none";
+    } else {
+      messageSection.style.display = "block";
     }
   }
   toggleMessageSection();
 })
 
+// Get GitHub repositories
+fetch(`https://api.github.com/users/mcjauregui96/repos`)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error("Request failed");
+    }
+    return response.json(); // Parse response as JSON
+  })
 
+  //Store data
+  .then(repositories => {
+    console.log(repositories);
+  
+    //Display repositories in list
+    const projectSection = document.getElementById("projects");
+    const projectList = projectSection.querySelector("ul");
 
+    // Create a for loop to iterate over your repositories Array, starting at index 0
+    for (let i = 0; i < repositories.length; i++) {
+      const project = document.createElement('li');
+      project.innerText = repositories[i].name;
+      projectList.appendChild(project);
+    
+    } 
+  })
+   
+  .catch((error) => {
+    console.error("An error occurred:", error);
+  });
+   
 
+/*
+    // Clear any existing content
+    projectList.innerHTML = '';
+    
+    
+      
+      // Optional: Add link to repository
+      const link = document.createElement('a');
+      link.href = repositories[i].html_url;
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      link.appendChild(project);
+      
+      projectList.appendChild(link);
+    }
+  })
+  .catch(error => {
+    console.error('Error fetching repositories:', error);
+    
+    // Display error message to user
+    const projectSection = document.getElementById('projects');
+    const projectList = projectSection.querySelector('ul');
+    projectList.innerHTML = '<li>Unable to load projects. Please try again later.</li>';
+  }); */
 
